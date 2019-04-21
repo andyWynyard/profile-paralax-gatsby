@@ -47,11 +47,11 @@ const AboutSub = styled.span`
 `
 
 const AboutDesc = styled.p`
-  ${tw`text-grey-light text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
+  ${tw`text-grey-dark text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
 `
 
 const ContactText = styled.p`
-  ${tw`text-grey-light font-sans text-xl md:text-2xl lg:text-3xl`};
+  ${tw`text-grey-dark font-sans text-xl md:text-2xl lg:text-3xl`};
 `
 
 const Footer = styled.footer`
@@ -128,7 +128,7 @@ const Index = props => {
           </ProjectsWrapper>
         </Projects>
         <About offset={3}>
-          <Title>About</Title>
+          <Title titleColor="#f8f8f8">About</Title>
           <AboutHero>
             <Avatar src={avatar} alt="John Doe" />
             <AboutSub>
@@ -151,19 +151,13 @@ const Index = props => {
           <Inner>
             <Title>Get in touch</Title>
             <ContactText>
-              Say <a href="mailto:plizNoSp4m@domain.tld">Hi</a> or find me on
+              Say <a href="mailto:andrew.wynyard@gmail.com">Hi</a> or find me on
               other platforms:{' '}
-              <a href="https://dribbble.com/LekoArts">Dribbble</a> &{' '}
-              <a href="https://www.instagram.com/lekoarts.de/">Instagram</a>
+              <a href="https://github.com/andyWynyard">Github</a> &{' '}
+              <a href="https://twitter.com/AndyWynyard">Twitter</a>
             </ContactText>
           </Inner>
-          <Footer>
-            &copy; 2019 by Gatsby Starter Portfolio Cara.{' '}
-            <a href="https://github.com/LekoArts/gatsby-starter-portfolio-cara">
-              Github Repository
-            </a>
-            . Made by <a href="https://www.lekoarts.de">LekoArts</a>.
-          </Footer>
+          <Footer />
         </Contact>
       </Parallax>
     </>
