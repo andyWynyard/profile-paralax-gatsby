@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
+import 'typeface-raleway'
 
 const GlobalStyle = createGlobalStyle`
   *, *:before, *:after {
@@ -10,9 +11,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     -ms-overflow-style: scrollbar;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: #161719;
+    background-color: #f8f8f8;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    font-family: 'Raleway';
   }
   html, body {
     width: 100%;
