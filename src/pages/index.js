@@ -79,51 +79,47 @@ const Index = props => {
               link="https://reactjs.org/"
               bg="linear-gradient(to right, #D4145A 0%, #FBB03B 100%)"
             >
-              React is a
+              React, talk about that here
             </ProjectCard>
             <ProjectCard
               image={props.data.gatsbyImg.childImageSharp.fluid}
-              title="Harry Potter"
+              title="Gatsby"
               link="https://www.behance.net/gallery/52915793/Harry-Potter"
               bg="linear-gradient(to right, #662D8C 0%, #ED1E79 100%)"
             >
-              I entered the DOCMA 2017 award with this Harry Potter inspired
-              image.
+              Gatsby Stuff
             </ProjectCard>
             <ProjectCard
               image={props.data.nextjsImg.childImageSharp.fluid}
-              title="Tomb Raider"
+              title="NextJS"
               link="https://www.behance.net/gallery/43907099/Tomb-Raider"
               bg="linear-gradient(to right, #009245 0%, #FCEE21 100%)"
             >
-              Recreation of a Tomb Raider Wallpaper (Fan Art)
+              Talk about Next here
             </ProjectCard>
             <ProjectCard
               image={props.data.nodeImg.childImageSharp.fluid}
-              title="Eagle"
+              title="Node"
               link="https://www.behance.net/gallery/38068151/Eagle"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              A fantasy image manipulation relocating the habitat of wild
-              animals.
+              Talk about node here
             </ProjectCard>
             <ProjectCard
               image={props.data.graphqlImg.childImageSharp.fluid}
-              title="Eagle"
+              title="GraphQL"
               link="https://www.behance.net/gallery/38068151/Eagle"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              A fantasy image manipulation relocating the habitat of wild
-              animals.
+              GraphQL stuff goes here
             </ProjectCard>
             <ProjectCard
               image={props.data.prismaImg.childImageSharp.fluid}
-              title="Eagle"
+              title="Prisma"
               link="https://www.behance.net/gallery/38068151/Eagle"
               bg="linear-gradient(to right, #D585FF 0%, #00FFEE 100%)"
             >
-              A fantasy image manipulation relocating the habitat of wild
-              animals.
+              Talk about Prisma APIs here.
             </ProjectCard>
           </ProjectsWrapper>
         </Projects>
