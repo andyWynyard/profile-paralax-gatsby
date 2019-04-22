@@ -6,14 +6,17 @@ import Img from 'gatsby-image'
 
 const Wrapper = styled.a`
   width: 100%;
-  ${tw`shadow-lg relative no-underline rounded-lg px-8 py-8 md:py-24 text-white`};
+  ${tw`shadow-lg relative no-underline rounded-lg px-3 py-3 md:py-5 text-white`};
   background: ${props => props.bg};
   transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
   &:hover {
     transform: translateY(-5px);
   }
+`
+const ImgWrapper = styled.div`
+  padding: 1rem;
 `
 
 const Text = styled.div`
@@ -27,12 +30,17 @@ const Title = styled.div`
 `
 
 const ProjectCard = ({ title, link, children, bg, image }) => (
-  <Wrapper href={link} target="_blank" rel="noopener noreferrer" bg={bg}>
+  <Wrapper
+    href={`http://${link}`}
+    target="_blank"
+    rel="noopener noreferrer"
+    bg={bg}
+  >
     <div>
       <Text>{children}</Text>
       <Title>{title}</Title>
     </div>
-    {image && <Img fluid={image} />}
+    <ImgWrapper>{image && <Img fluid={image} />}</ImgWrapper>
   </Wrapper>
 )
 

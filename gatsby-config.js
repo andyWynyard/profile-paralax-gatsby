@@ -6,6 +6,8 @@ module.exports = {
   /* General Information */
   siteMetadata: {
     siteUrl: config.siteUrl + pathPrefix,
+    aboutSub: config.siteHeadline,
+    aboutDesc: config.siteDescription,
   },
   /* Plugins */
   plugins: [
