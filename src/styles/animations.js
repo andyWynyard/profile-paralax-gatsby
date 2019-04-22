@@ -1,6 +1,9 @@
 import tw from 'tailwind.macro'
 import styled, { keyframes, css } from 'styled-components'
 
+const getRandomInt = (min, max) =>
+  Math.floor(Math.random(min) * Math.floor(max))
+
 const rotate = keyframes`
   from {
     transform: rotate(0deg);
@@ -41,11 +44,11 @@ const upDownWide = keyframes`
 `
 
 const upDownAnimation = css`
-  ${upDown} 4s ease-in-out infinite alternate;
+  ${upDown} ${getRandomInt(1, 3)}s ease-in-out infinite alternate;
 `
 
 const upDownWideAnimation = css`
-  ${upDownWide} 18s ease-in-out infinite alternate;
+  ${upDownWide} ${getRandomInt(20, 30)}s ease-in-out infinite alternate;
 `
 
 export const UpDown = styled.div`
