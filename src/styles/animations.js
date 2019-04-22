@@ -44,11 +44,11 @@ const upDownWide = keyframes`
 `
 
 const upDownAnimation = css`
-  ${upDown} ${getRandomInt(1, 3)}s ease-in-out infinite alternate;
+  ${upDown} ${getRandomInt(3, 4)}s ease-in-out infinite alternate;
 `
 
 const upDownWideAnimation = css`
-  ${upDownWide} ${getRandomInt(20, 30)}s ease-in-out infinite alternate;
+  ${upDownWide} ${getRandomInt(10, 15)}s ease-in-out infinite alternate;
 `
 
 export const UpDown = styled.div`
