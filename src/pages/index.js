@@ -63,6 +63,12 @@ const Footer = styled.footer`
 
 const Index = ({ data }) => {
   const { allFile, site } = data
+
+  cardData.map(
+    (item, i) => (item.image = allFile.edges[i].node.childImageSharp.fluid)
+  )
+
+  console.log('cardData', cardData)
   return (
     <>
       <Layout />
@@ -79,7 +85,7 @@ const Index = ({ data }) => {
             {cardData.map((item, i) => (
               <ProjectCard
                 key={i}
-                image={allFile.edges[i].node.childImageSharp.fluid}
+                image={item.image}
                 title={item.title}
                 link={item.link}
                 bg={item.bg}

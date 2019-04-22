@@ -1,6 +1,7 @@
 export const cardData = [
   {
     title: 'NextJS',
+    name: 'nextjs',
     link: 'nextjs.org',
     bg: 'linear-gradient(to right, #D585FF 0%, #00FFEE 100%)',
     text:
@@ -8,6 +9,7 @@ export const cardData = [
   },
   {
     title: 'Gatsby',
+    name: 'gatsby',
     link: 'gatsbyjs.com',
     bg: 'linear-gradient(to right, #662D8C 0%, #ED1E79 100%)',
     text:
@@ -15,6 +17,7 @@ export const cardData = [
   },
   {
     title: 'Node',
+    name: 'node',
     link: 'nodejs.org',
     bg: 'linear-gradient(to right, #009245 0%, #FBB03B 100%)',
     text:
@@ -22,6 +25,7 @@ export const cardData = [
   },
   {
     title: 'Prisma',
+    name: 'prisma',
     link: 'prisma.io',
     bg: 'linear-gradient(to right, #FBB03B 0%,  #00FFEE 100%)',
     text:
@@ -29,6 +33,7 @@ export const cardData = [
   },
   {
     title: 'React',
+    name: 'react',
     link: 'reactjs.org',
     bg: 'linear-gradient(to right, #D4145A 0%, #FBB03B 100%)',
     text:
@@ -36,6 +41,7 @@ export const cardData = [
   },
   {
     title: 'GraphQL',
+    name: 'graphql',
     link: 'graphql.org/',
     bg: 'linear-gradient(to right, #D585FF 0%, #FCEE21 100%)',
     text:
