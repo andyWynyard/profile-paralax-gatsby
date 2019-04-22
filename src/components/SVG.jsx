@@ -113,3 +113,17 @@ SVG.defaultProps = {
   top: '0%',
   hiddenMobile: false,
 }
+
+// ```JSX
+//   <SVG icon="triangle" hideMobile width={48} stroke={colors.orange} left="10%" top="20%" />
+//   <SVG icon="hexa" width={48} stroke={colors.red} left="60%" top="70%" />
+//   <SVG icon="box" width={6} fill={colors['grey-darker']} left="60%" top="15%" />
+// ```
+
+// - For `icon`, you have the options: `triangle, circle, arrowUp, upDown, box, hexa, cross`
+// - If you want the SVG to be hidden on mobile view, add `hideMobile` to the SVG component
+// - You can define the width via the TailwindCSS width [option](https://tailwindcss.com/docs/width)
+// - The colors get defined via the TailwindCSS color [option](https://tailwindcss.com/docs/colors)
+//   - Please note that you will either have to define the color in `stroke` **or** `fill` depending on the icon. For reference, have a look at the currently used SVGs
+// - The options `left` and `top` position the icon relatively to its parent container
+// - You can also wrap the SVGs with `<UpDown />` or `<UpDownWide />` to animate them
