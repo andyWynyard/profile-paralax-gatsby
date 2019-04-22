@@ -1,11 +1,11 @@
 export const cardData = [
   {
-    title: 'NextJS',
-    name: 'nextjs',
-    link: 'nextjs.org',
-    bg: 'linear-gradient(to right, #D585FF 0%, #00FFEE 100%)',
+    title: 'React',
+    name: 'react',
+    link: 'reactjs.org',
+    bg: 'linear-gradient(to right, #D4145A 0%, #FBB03B 100%)',
     text:
-      'Gatsby cant do everything, so with web apps, NextJS is the answer. Its SSR React, and its super nice to couple with GraphQL.',
+      'I love React. When I was looking into the JS dev stack, I found React and left Java behind forever. It is the reason I love the JS/JAM stack so much.',
   },
   {
     title: 'Gatsby',
@@ -14,6 +14,14 @@ export const cardData = [
     bg: 'linear-gradient(to right, #662D8C 0%, #ED1E79 100%)',
     text:
       'After getting into React, I found static site generators. I got into Gatsby early, as it seemed the smartest. If building a web site, this is the answer, also, its mostly server side rendered.',
+  },
+  {
+    title: 'NextJS',
+    name: 'nextjs',
+    link: 'nextjs.org',
+    bg: 'linear-gradient(to right, #D585FF 0%, #00FFEE 100%)',
+    text:
+      'Gatsby cant do everything, so with web apps, NextJS is the answer. Its SSR React, and its super nice to couple with GraphQL.',
   },
   {
     title: 'Node',
@@ -30,14 +38,6 @@ export const cardData = [
     bg: 'linear-gradient(to right, #FBB03B 0%,  #00FFEE 100%)',
     text:
       "Something new, and really focused around web aps. This service allows you to connect up multiple API's and databases into one GraphQL end point. Its a super smart answer to abstract away great swathes of boilerplate",
-  },
-  {
-    title: 'React',
-    name: 'react',
-    link: 'reactjs.org',
-    bg: 'linear-gradient(to right, #D4145A 0%, #FBB03B 100%)',
-    text:
-      'I love React. When I was looking into the JS dev stack, I found React and left Java behind forever. It is the reason I love the JS/JAM stack so much.',
   },
   {
     title: 'GraphQL',

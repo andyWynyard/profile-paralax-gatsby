@@ -62,13 +62,9 @@ const Footer = styled.footer`
 `
 
 const Index = ({ data }) => {
-  const { allFile, site } = data
+  const { site } = data
 
-  cardData.map(
-    (item, i) => (item.image = allFile.edges[i].node.childImageSharp.fluid)
-  )
-
-  console.log('cardData', cardData)
+  cardData.map(item => (item.image = data[item.name].childImageSharp.fluid))
   return (
     <>
       <Layout />
@@ -141,6 +137,54 @@ export const query = graphql`
       siteMetadata {
         aboutSub
         aboutDesc
+      }
+    }
+    gatsby: file(name: { eq: "gatsby" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    nextjs: file(name: { eq: "nextjs" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    node: file(name: { eq: "node" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    prisma: file(name: { eq: "prisma" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    react: file(name: { eq: "react" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
+      }
+    }
+    graphql: file(name: { eq: "graphql" }) {
+      name
+      childImageSharp {
+        fluid {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
       }
     }
   }
