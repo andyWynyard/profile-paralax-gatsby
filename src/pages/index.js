@@ -76,15 +76,15 @@ const Index = ({ data }) => {
         <Projects offset={1}>
           <Title>Tech Stack</Title>
           <ProjectsWrapper>
-            {allFile.edges.map((item, i) => (
+            {cardData.map((item, i) => (
               <ProjectCard
                 key={i}
-                image={item.node.childImageSharp.fluid}
-                title={cardData[i].title}
-                link={cardData[i].link}
-                bg={cardData[i].bg}
+                image={allFile.edges[i].node.childImageSharp.fluid}
+                title={item.title}
+                link={item.link}
+                bg={item.bg}
               >
-                {cardData[i].text}
+                {item.text}
               </ProjectCard>
             ))}
           </ProjectsWrapper>
