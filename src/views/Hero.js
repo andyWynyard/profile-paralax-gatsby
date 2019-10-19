@@ -65,14 +65,14 @@ const Hero = ({ children, offset }) => (
           top="15%"
         />
         <SVG icon="circle" width={6} fill={colors.pink} left="75%" top="10%" />
-        <SVG
+        {/* <SVG
           icon="upDown"
           hiddenMobile
           width={30}
           fill={colors['grey']}
           left="-45%"
           top="10%"
-        />
+        /> */}
       </UpDownWide>
       <SVG
         icon="circle"
@@ -84,7 +84,7 @@ const Hero = ({ children, offset }) => (
       />
       <SVG icon="circle" width={10} fill={colors.orange} left="4%" top="20%" />
       <SVG icon="circle" width={12} fill={colors.green} left="50%" top="60%" />
-      <SVG icon="upDown" width={8} fill={colors.blue} left="95%" top="90%" />
+      */}
       <SVG
         icon="upDown"
         hiddenMobile
@@ -94,37 +94,12 @@ const Hero = ({ children, offset }) => (
         top="80%"
       />
       <SVG
-        icon="triangle"
-        width={8}
-        stroke={colors['grey-darker']}
-        left="25%"
-        top="5%"
-      />
-      <SVG icon="circle" width={64} fill={colors.green} left="95%" top="5%" />
-      <SVG
-        icon="cross"
-        hiddenMobile
-        width={64}
-        fill={colors.purple}
-        left="5%"
-        top="90%"
-      />
-      <SVG
-        icon="box"
-        width={6}
-        fill={colors['grey-darkest']}
-        left="10%"
-        top="10%"
-      />
-      <SVG
         icon="box"
         width={12}
         fill={colors['grey-darkest']}
         left="40%"
         top="30%"
       />
-      <SVG icon="hexa" width={16} stroke={colors.pink} left="10%" top="50%" />
-      <SVG icon="hexa" width={8} stroke={colors.pink} left="80%" top="70%" />
     </Divider>
     <Content speed={0.4} offset={offset}>
       <Wrapper>{children}</Wrapper>
