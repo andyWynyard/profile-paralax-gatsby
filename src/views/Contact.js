@@ -52,14 +52,6 @@ const Contact = ({ children, offset }) => (
     <Divider speed={0.1} offset={offset}>
       <UpDown>
         <SVG
-          icon="upDown"
-          hiddenMobile
-          width={80}
-          fill={colors['yellow']}
-          left="-70%"
-          top="20%"
-        />
-        <SVG
           icon="triangle"
           width={8}
           stroke={colors['grey-darkest']}
