@@ -40,14 +40,14 @@ const About = ({ children, offset }) => (
           left="25%"
           top="5%"
         />
-        <SVG
+        {/* <SVG
           icon="upDown"
           hiddenMobile
           width={24}
           fill={colors.orange}
           left="80%"
           top="80%"
-        />
+        /> */}
       </UpDown>
       <UpDownWide>
         <SVG
