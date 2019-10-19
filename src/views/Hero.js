@@ -15,18 +15,6 @@ const Wrapper = styled.div`
 const Hero = ({ children, offset }) => (
   <>
     <Divider speed={0.2} offset={offset}>
-      <UpDown>
-        <SVG
-          icon="triangle"
-          hiddenMobile
-          width={30}
-          stroke={colors.orange}
-          left="10%"
-          top="20%"
-        />
-        <SVG icon="hexa" width={10} stroke={colors.red} left="60%" top="70%" />
-        <SVG icon="box" width={20} fill={colors.yellow} left="20%" top="15%" />
-      </UpDown>
       <UpDownWide>
         <SVG
           icon="arrowUp"
@@ -65,14 +53,6 @@ const Hero = ({ children, offset }) => (
           top="15%"
         />
         <SVG icon="circle" width={6} fill={colors.pink} left="75%" top="10%" />
-        {/* <SVG
-          icon="upDown"
-          hiddenMobile
-          width={30}
-          fill={colors['grey']}
-          left="-45%"
-          top="10%"
-        /> */}
       </UpDownWide>
       <SVG
         icon="circle"
@@ -84,7 +64,7 @@ const Hero = ({ children, offset }) => (
       />
       <SVG icon="circle" width={10} fill={colors.orange} left="4%" top="20%" />
       <SVG icon="circle" width={12} fill={colors.green} left="50%" top="60%" />
-      */}
+
       <SVG
         icon="upDown"
         hiddenMobile
