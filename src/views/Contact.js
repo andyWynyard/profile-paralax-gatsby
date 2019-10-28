@@ -24,13 +24,13 @@ const Contact = ({ children, offset, images }) => (
       </UpDown>
       <UpDownWide>
         <ImgWrapper marginLeft={"30vw"} width={"100px"}>
-          {images && <Img fluid={images.react} />}
+          {images && <Img fluid={images.next} />}
         </ImgWrapper>
         <ImgWrapper marginLeft={"60vw"} width={"200px"}>
           {images && <Img fluid={images.graphql} />}
         </ImgWrapper>
         <ImgWrapper marginLeft={"10vw"} width={"200px"}>
-          {images && <Img fluid={images.next} />}
+          {images && <Img fluid={images.gatsby} />}
         </ImgWrapper>
       </UpDownWide>
       <ImgWrapper marginLeft={"10vw"} width={"100px"}>
