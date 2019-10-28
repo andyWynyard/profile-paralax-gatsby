@@ -1,13 +1,24 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Divider, DividerMiddle } from '../elements/Dividers'
-import Content from '../elements/Content'
-import Inner from '../elements/Inner'
-import { UpDown, UpDownWide } from '../styles/animations'
-import { colors } from '../../tailwind'
-import SVG from '../components/SVG'
+import React from "react";
+import PropTypes from "prop-types";
+import { Divider, DividerMiddle } from "../elements/Dividers";
+import styled from "styled-components";
+import Img from "gatsby-image";
 
-const Projects = ({ children, offset }) => (
+import Content from "../elements/Content";
+import Inner from "../elements/Inner";
+import { UpDown, UpDownWide } from "../styles/animations";
+import { colors } from "../../tailwind";
+
+// import nodeImage from "../images/node.png";
+import SVG from "../components/SVG";
+
+const ImgWrapper = styled.div`
+  padding: 1rem;
+  width: ${props => props.width};
+  margin-left: ${props => props.marginLeft};
+`;
+
+const Projects = ({ children, offset, images }) => (
   <>
     <DividerMiddle
       bg="linear-gradient(to right, SlateBlue 0%, DeepSkyBlue 100%)"
@@ -20,57 +31,29 @@ const Projects = ({ children, offset }) => (
     </Content>
     <Divider speed={0.1} offset={offset} factor={2}>
       <UpDown>
-        <SVG icon="upDown" width={8} fill={colors.teal} left="70%" top="20%" />
-
-        <SVG
-          icon="circle"
-          hiddenMobile
-          width={24}
-          fill={colors.white}
-          left="17%"
-          top="60%"
-        />
+        <ImgWrapper marginLeft={"50vw"} width={"100px"}>
+          {images && <Img fluid={images.node} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"70vw"} width={"300px"}>
+          {images && <Img fluid={images.next} />}
+        </ImgWrapper>
       </UpDown>
       <UpDownWide>
-        <SVG
-          icon="arrowUp"
-          hiddenMobile
-          width={16}
-          fill={colors.green}
-          left="20%"
-          top="90%"
-        />
-        <SVG
-          icon="triangle"
-          width={12}
-          stroke={colors.white}
-          left="90%"
-          top="30%"
-        />
-        <SVG
-          icon="circle"
-          width={16}
-          fill={colors.yellow}
-          left="70%"
-          top="90%"
-        />
-        <SVG
-          icon="triangle"
-          hiddenMobile
-          width={16}
-          stroke={colors.teal}
-          left="18%"
-          top="75%"
-        />
-        <SVG icon="circle" width={6} fill={colors.white} left="75%" top="10%" />
-        <SVG
-          icon="upDown"
-          hiddenMobile
-          width={8}
-          fill={colors.green}
-          left="45%"
-          top="10%"
-        />
+        <ImgWrapper marginLeft={"10vw"} width={"300px"}>
+          {images && <Img fluid={images.react} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"40vw"} width={"200px"}>
+          {images && <Img fluid={images.next} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"33vw"} width={"100px"}>
+          {images && <Img fluid={images.react} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"88vw"} width={"100px"}>
+          {images && <Img fluid={images.gatsby} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"91vw"} width={"200px"}>
+          {images && <Img fluid={images.graphql} />}
+        </ImgWrapper>
       </UpDownWide>
       <SVG icon="circle" width={6} fill={colors.white} left="4%" top="20%" />
       <SVG icon="circle" width={12} fill={colors.pink} left="80%" top="60%" />
@@ -80,11 +63,11 @@ const Projects = ({ children, offset }) => (
       <SVG icon="hexa" width={8} stroke={colors.yellow} left="80%" top="70%" />
     </Divider>
   </>
-)
+);
 
-export default Projects
+export default Projects;
 
 Projects.propTypes = {
   children: PropTypes.node.isRequired,
-  offset: PropTypes.number.isRequired,
-}
+  offset: PropTypes.number.isRequired
+};
