@@ -7,56 +7,41 @@ import Content from "../elements/Content";
 import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
 import { colors } from "../../tailwind";
 import SVG from "../components/SVG";
+import ImgWrapper from "../components/ImgWrapper";
 
-const Contact = ({ children, offset }) => (
+import Img from "gatsby-image";
+
+const Contact = ({ children, offset, images }) => (
   <>
     <Content speed={0.4} offset={offset}>
       {children}
     </Content>
     <Divider speed={0.1} offset={offset}>
       <UpDown>
-        <SVG
-          icon="triangle"
-          width={8}
-          stroke={colors["grey-darkest"]}
-          left="-25%"
-          top="5%"
-        />
+        <ImgWrapper marginLeft={"50vw"} width={"100px"}>
+          {images && <Img fluid={images.node} />}
+        </ImgWrapper>
       </UpDown>
       <UpDownWide>
-        <SVG
-          icon="triangle"
-          width={12}
-          stroke={colors.green}
-          left="95%"
-          top="50%"
-        />
-        <SVG
-          icon="circle"
-          width={6}
-          fill={colors.yellow}
-          left="85%"
-          top="15%"
-        />
-        <SVG
-          icon="upDown"
-          hiddenMobile
-          width={8}
-          fill={colors["grey-darkest"]}
-          left="45%"
-          top="10%"
-        />
+        <ImgWrapper marginLeft={"30vw"} width={"100px"}>
+          {images && <Img fluid={images.react} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"60vw"} width={"200px"}>
+          {images && <Img fluid={images.graphql} />}
+        </ImgWrapper>
+        <ImgWrapper marginLeft={"10vw"} width={"200px"}>
+          {images && <Img fluid={images.next} />}
+        </ImgWrapper>
       </UpDownWide>
-      <SVG icon="circle" width={6} fill={colors.orange} left="4%" top="20%" />
-      <SVG
-        icon="circle"
-        width={12}
-        fill={colors["grey-darkest"]}
-        left="70%"
-        top="60%"
-      />
-      <SVG icon="box" width={12} fill={colors.green} left="20%" top="30%" />
-      <SVG icon="hexa" width={80} stroke={colors.green} left="40%" top="20%" />
+      <ImgWrapper marginLeft={"10vw"} width={"100px"}>
+        {images && <Img fluid={images.prisma} />}
+      </ImgWrapper>
+      <ImgWrapper marginLeft={"-20vw"} width={"400px"}>
+        {images && <Img fluid={images.react} />}
+      </ImgWrapper>
+      <ImgWrapper marginLeft={"50vw"} width={"800px"}>
+        {images && <Img fluid={images.graphql} />}
+      </ImgWrapper>
     </Divider>
   </>
 );

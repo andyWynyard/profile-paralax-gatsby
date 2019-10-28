@@ -63,7 +63,7 @@ const Footer = styled.footer`
 
 const Index = ({ data }) => {
   const { site } = data;
-
+  console.log("data", data);
   const node = data.node.childImageSharp.fluid;
   const react = data.react.childImageSharp.fluid;
   const gatsby = data.gatsby.childImageSharp.fluid;
@@ -76,7 +76,6 @@ const Index = ({ data }) => {
     react,
     gatsby,
     next,
-    prisma,
     prisma,
     graphql
   };

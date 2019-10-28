@@ -21,6 +21,9 @@ const Hero = ({ children, offset, images }) => (
         <ImgWrapper marginLeft={"50vw"} width={"100px"}>
           {images && <Img fluid={images.node} />}
         </ImgWrapper>
+        <ImgWrapper marginLeft={"80vw"} width={"100px"}>
+          {images && <Img fluid={images.prisma} />}
+        </ImgWrapper>
         <ImgWrapper marginLeft={"10vw"} width={"100px"}>
           {images && <Img fluid={images.next} />}
         </ImgWrapper>

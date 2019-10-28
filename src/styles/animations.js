@@ -1,8 +1,8 @@
-import tw from 'tailwind.macro'
-import styled, { keyframes, css } from 'styled-components'
+import tw from "tailwind.macro";
+import styled, { keyframes, css } from "styled-components";
 
 const getRandomInt = (min, max) =>
-  Math.floor(Math.random(min) * Math.floor(max))
+  Math.floor(Math.random(min) * Math.floor(max));
 
 const rotate = keyframes`
   from {
@@ -11,7 +11,7 @@ const rotate = keyframes`
   to {
     transform: rotate(360deg);
   }
-`
+`;
 
 const wave = keyframes`
   0% {
@@ -23,7 +23,7 @@ const wave = keyframes`
   100% {
     d: path("M 0 100 Q 150 350 400 200 Q 650 50 800 300 L 800 0 L 0 0 L 0 100 Z");
   }
-`
+`;
 
 const upDown = keyframes`
   from {
@@ -32,7 +32,7 @@ const upDown = keyframes`
   to {
     transform: translateY(30px);
   }
-`
+`;
 
 const upDownWide = keyframes`
   from {
@@ -41,30 +41,30 @@ const upDownWide = keyframes`
   to {
     transform: translateY(200px);
   }
-`
+`;
 
 const upDownAnimation = css`
-  ${upDown} ${getRandomInt(3, 4)}s ease-in-out infinite alternate;
-`
+  ${upDown} ${getRandomInt(2, 10)}s ease-in-out infinite alternate;
+`;
 
 const upDownWideAnimation = css`
   ${upDownWide} ${getRandomInt(10, 15)}s ease-in-out infinite alternate;
-`
+`;
 
 export const UpDown = styled.div`
   animation: ${upDownAnimation};
   ${tw`pin absolute`};
-`
+`;
 
 export const UpDownWide = styled.div`
   animation: ${upDownWideAnimation};
   ${tw`pin absolute`};
-`
+`;
 
 export const waveAnimation = length => css`
   animation: ${wave} ${length} linear infinite alternate;
-`
+`;
 
 export const rotateAnimation = length => css`
   animation: ${rotate} ${length} linear infinite;
-`
+`;
