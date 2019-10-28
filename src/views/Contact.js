@@ -8,22 +8,6 @@ import { UpDown, UpDownWide, waveAnimation } from "../styles/animations";
 import { colors } from "../../tailwind";
 import SVG from "../components/SVG";
 
-const WaveWrapper = styled.div`
-  ${tw`absolute pin-b w-full`};
-  transform: matrix(1, 0, 0, -1, 0, 0);
-`;
-
-const InnerWave = styled.div`
-  ${tw`relative h-full`};
-  svg {
-    width: 100%;
-    height: 40vh;
-  }
-  path {
-    ${waveAnimation("20s")};
-  }
-`;
-
 const Contact = ({ children, offset }) => (
   <>
     <Content speed={0.4} offset={offset}>
