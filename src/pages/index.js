@@ -1,26 +1,32 @@
-import React from "react";
-import styled from "styled-components";
-import tw from "tailwind.macro";
-import { Parallax } from "react-spring/renderprops-addons.cjs";
-import { graphql } from "gatsby";
+import React from 'react'
+import styled from 'styled-components'
+import { color } from 'styled-system'
+import tw from 'tailwind.macro'
+import { Parallax } from 'react-spring/renderprops-addons.cjs'
+import { graphql } from 'gatsby'
+import { Link } from 'gatsby'
+import { Typography } from '@andy-wynyard/mcclane-components'
 // Components
-import Layout from "../components/Layout";
-import ProjectCard from "../components/ProjectCard";
+import Layout from '../components/Layout'
+import ProjectCard from '../components/ProjectCard'
+import Menu from '../components/Menu'
 
 // Elements
-import Inner from "../elements/Inner";
-import { Title, BigTitle, Subtitle } from "../elements/Titles";
+import Inner from '../elements/Inner'
+import { Title, BigTitle, Subtitle } from '../elements/Titles'
 
 // Views
-import Hero from "../views/Hero";
-import Projects from "../views/Projects";
-import About from "../views/About";
-import Contact from "../views/Contact";
+import Hero from '../views/Hero'
+import Projects from '../views/Projects'
+import About from '../views/About'
+import Contact from '../views/Contact'
 
 // Data
-import { cardData } from "../../static/staticData";
+import { cardData } from '../../static/staticData'
 
-import avatar from "../images/avatar.jpg";
+import avatar from '../images/avatar.jpg'
+
+const { H1 } = Typography
 
 const ProjectsWrapper = styled.div`
   ${tw`flex flex-wrap justify-between mt-8`};
@@ -35,41 +41,50 @@ const ProjectsWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
-`;
+`
+
+const GalleryLink = styled(Link)`
+  ${color}
+  text-transform: uppercase;
+  z-index: 100;
+  position: fixed;
+  top: 1rem;
+  right: 3rem;
+  text-decoration: none;
+`
 
 const AboutHero = styled.div`
   ${tw`flex flex-col lg:flex-row items-center mt-8`};
-`;
+`
 
 const Avatar = styled.img`
   ${tw`rounded-full w-32 xl:w-48 shadow-lg h-auto`};
-`;
+`
 
 const AboutSub = styled.span`
   ${tw`text-white pt-12 lg:pt-0 lg:pl-12 text-2xl lg:text-3xl xl:text-4xl`};
-`;
+`
 
 const AboutDesc = styled.p`
   ${tw`text-grey-dark text-lg md:text-xl lg:text-2xl font-sans pt-6 md:pt-12 text-justify`};
-`;
+`
 
 const ContactText = styled.p`
   ${tw`text-grey-dark font-sans text-xl md:text-2xl lg:text-3xl`};
-`;
+`
 
 const Footer = styled.footer`
   ${tw`text-center text-grey absolute pin-b p-6 font-sans text-md lg:text-lg`};
-`;
+`
 
 const Index = ({ data }) => {
-  const { site } = data;
-  console.log("data", data);
-  const node = data.node.childImageSharp.fluid;
-  const react = data.react.childImageSharp.fluid;
-  const gatsby = data.gatsby.childImageSharp.fluid;
-  const next = data.nextjs.childImageSharp.fluid;
-  const prisma = data.prisma.childImageSharp.fluid;
-  const graphql = data.graphql.childImageSharp.fluid;
+  const { site } = data
+  const node = data.node.childImageSharp.fluid
+  const react = data.react.childImageSharp.fluid
+  const gatsby = data.gatsby.childImageSharp.fluid
+  const next = data.nextjs.childImageSharp.fluid
+  const prisma = data.prisma.childImageSharp.fluid
+  const graphql = data.graphql.childImageSharp.fluid
 
   const images = {
     node,
@@ -77,13 +92,18 @@ const Index = ({ data }) => {
     gatsby,
     next,
     prisma,
-    graphql
-  };
+    graphql,
+  }
 
-  cardData.map(item => (item.image = data[item.name].childImageSharp.fluid));
+  cardData.map((item) => (item.image = data[item.name].childImageSharp.fluid))
   return (
-    <>
-      <Layout />
+    <Layout>
+      {/* <Menu /> */}
+      <GalleryLink to="/gallery">
+        <H1 color="darkGrey" fontFamily="primary">
+          Gallery
+        </H1>
+      </GalleryLink>
       <Parallax pages={5}>
         <Hero images={images} offset={0}>
           <BigTitle>
@@ -120,19 +140,19 @@ const Index = ({ data }) => {
             <Title>Get in touch</Title>
             <ContactText>
               Say <a href="mailto:andrew.wynyard@gmail.com">Hi</a> or find me on
-              other platforms:{" "}
-              <a href="https://github.com/andyWynyard">Github</a> &{" "}
+              other platforms:{' '}
+              <a href="https://github.com/andyWynyard">Github</a> &{' '}
               <a href="https://twitter.com/AndyWynyard">Twitter</a>
             </ContactText>
           </Inner>
           <Footer />
         </Contact>
       </Parallax>
-    </>
-  );
-};
+    </Layout>
+  )
+}
 
-export default Index;
+export default Index
 
 export const query = graphql`
   query {
@@ -204,4 +224,4 @@ export const query = graphql`
       }
     }
   }
-`;
+`

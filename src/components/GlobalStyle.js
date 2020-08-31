@@ -1,7 +1,11 @@
 import { createGlobalStyle } from 'styled-components'
+import { normalize } from 'polished'
+
 import 'typeface-raleway'
 
-const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle` 
+
+  ${normalize()}
   *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -9,12 +13,9 @@ const GlobalStyle = createGlobalStyle`
     text-rendering: optimizeLegibility;
     overflow-x: hidden;
     box-sizing: border-box;
-    -ms-overflow-style: scrollbar;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     background-color: #f8f8f8;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     font-family: 'Raleway';
+    font-size: 67.5%;
   }
   html, body {
     width: 100%;
@@ -22,10 +23,8 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
-  a {
-    color: #e07628;
-    text-decoration: none;
-  }
+
+
 `
 
 export default GlobalStyle

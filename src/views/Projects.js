@@ -1,15 +1,13 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Divider, DividerMiddle } from "../elements/Dividers";
-import styled from "styled-components";
-import ImgWrapper from "../components/ImgWrapper";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Divider, DividerMiddle } from '../elements/Dividers'
+import ImgWrapper from '../components/ImgWrapper'
 
-import Img from "gatsby-image";
+import Img from 'gatsby-image'
 
-import Content from "../elements/Content";
-import Inner from "../elements/Inner";
-import { UpDown, UpDownWide } from "../styles/animations";
-import { colors } from "../../tailwind";
+import Content from '../elements/Content'
+import Inner from '../elements/Inner'
+import { UpDown, UpDownWide } from '../styles/animations'
 
 const Projects = ({ children, offset, images }) => (
   <>
@@ -24,40 +22,40 @@ const Projects = ({ children, offset, images }) => (
     </Content>
     <Divider speed={0.1} offset={offset} factor={2}>
       <UpDown>
-        <ImgWrapper marginLeft={"50vw"} width={"100px"}>
+        <ImgWrapper marginLeft={'50vw'} width={'100px'}>
           {images && <Img fluid={images.node} />}
         </ImgWrapper>
-        <ImgWrapper marginLeft={"70vw"} width={"300px"}>
+        <ImgWrapper marginLeft={'70vw'} width={'300px'}>
           {images && <Img fluid={images.next} />}
         </ImgWrapper>
       </UpDown>
       <UpDownWide>
-        <ImgWrapper marginLeft={"10vw"} width={"300px"}>
+        <ImgWrapper marginLeft={'10vw'} width={'300px'}>
           {images && <Img fluid={images.react} />}
         </ImgWrapper>
-        <ImgWrapper marginLeft={"40vw"} width={"200px"}>
+        <ImgWrapper marginLeft={'40vw'} width={'200px'}>
           {images && <Img fluid={images.next} />}
         </ImgWrapper>
-        <ImgWrapper marginLeft={"33vw"} width={"100px"}>
+        <ImgWrapper marginLeft={'33vw'} width={'100px'}>
           {images && <Img fluid={images.react} />}
         </ImgWrapper>
-        <ImgWrapper marginLeft={"88vw"} width={"100px"}>
+        <ImgWrapper marginLeft={'88vw'} width={'100px'}>
           {images && <Img fluid={images.gatsby} />}
         </ImgWrapper>
-        <ImgWrapper marginLeft={"91vw"} width={"200px"}>
+        <ImgWrapper marginLeft={'91vw'} width={'200px'}>
           {images && <Img fluid={images.graphql} />}
         </ImgWrapper>
       </UpDownWide>
-      <ImgWrapper marginLeft={"20vw"} width={"200px"}>
+      <ImgWrapper marginLeft={'20vw'} width={'200px'}>
         {images && <Img fluid={images.graphql} />}
       </ImgWrapper>
     </Divider>
   </>
-);
+)
 
-export default Projects;
+export default Projects
 
 Projects.propTypes = {
   children: PropTypes.node.isRequired,
-  offset: PropTypes.number.isRequired
-};
+  offset: PropTypes.number.isRequired,
+}

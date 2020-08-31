@@ -1,13 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { Divider } from "../elements/Dividers";
-import Content from "../elements/Content";
-import Inner from "../elements/Inner";
-import { UpDown, UpDownWide } from "../styles/animations";
-import { colors } from "../../tailwind";
-import ImgWrapper from "../components/ImgWrapper";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Divider } from '../elements/Dividers'
+import Content from '../elements/Content'
+import Inner from '../elements/Inner'
+import { UpDown, UpDownWide } from '../styles/animations'
+import ImgWrapper from '../components/ImgWrapper'
 
-import Img from "gatsby-image";
+import Img from 'gatsby-image'
 
 const About = ({ children, offset, images }) => (
   <>
@@ -19,20 +18,20 @@ const About = ({ children, offset, images }) => (
     />
     <Divider speed={0.1} offset={offset}>
       <UpDown>
-        <ImgWrapper marginLeft={"-50vw"} width={"900px"}>
+        <ImgWrapper marginLeft={'-50vw'} width={'900px'}>
           {images && <Img fluid={images.react} />}
         </ImgWrapper>
 
-        <ImgWrapper marginLeft={"60vw"} width={"500px"}>
+        <ImgWrapper marginLeft={'60vw'} width={'500px'}>
           {images && <Img fluid={images.react} />}
         </ImgWrapper>
       </UpDown>
       <UpDownWide>
-        <ImgWrapper marginLeft={"70vw"} width={"300px"}>
+        <ImgWrapper marginLeft={'70vw'} width={'300px'}>
           {images && <Img fluid={images.graphql} />}
         </ImgWrapper>
       </UpDownWide>
-      <ImgWrapper marginLeft={"-10vw"} width={"100px"}>
+      <ImgWrapper marginLeft={'-10vw'} width={'100px'}>
         {images && <Img fluid={images.next} />}
       </ImgWrapper>
     </Divider>
@@ -40,11 +39,11 @@ const About = ({ children, offset, images }) => (
       <Inner>{children}</Inner>
     </Content>
   </>
-);
+)
 
-export default About;
+export default About
 
 About.propTypes = {
   children: PropTypes.node.isRequired,
-  offset: PropTypes.number.isRequired
-};
+  offset: PropTypes.number.isRequired,
+}
