@@ -1,15 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-import { color } from 'styled-system'
 import tw from 'tailwind.macro'
 import { Parallax } from 'react-spring/renderprops-addons.cjs'
 import { graphql } from 'gatsby'
-import { Link } from 'gatsby'
 import { Typography } from '@andy-wynyard/mcclane-components'
 // Components
 import Layout from '../components/Layout'
 import ProjectCard from '../components/ProjectCard'
-import Menu from '../components/Menu'
+import { SimpleMenu } from '../components/atoms'
+import { GalleryLink } from '../components/atoms'
 
 // Elements
 import Inner from '../elements/Inner'
@@ -41,16 +40,6 @@ const ProjectsWrapper = styled.div`
     grid-template-columns: 1fr;
     grid-gap: 2rem;
   }
-`
-
-const GalleryLink = styled(Link)`
-  ${color}
-  text-transform: uppercase;
-  z-index: 100;
-  position: fixed;
-  top: 1rem;
-  right: 3rem;
-  text-decoration: none;
 `
 
 const AboutHero = styled.div`
@@ -98,12 +87,8 @@ const Index = ({ data }) => {
   cardData.map((item) => (item.image = data[item.name].childImageSharp.fluid))
   return (
     <Layout>
-      {/* <Menu /> */}
-      <GalleryLink to="/gallery">
-        <H1 color="darkGrey" fontFamily="primary">
-          Gallery
-        </H1>
-      </GalleryLink>
+      <SimpleMenu />
+      <GalleryLink to="/gallery"></GalleryLink>
       <Parallax pages={5}>
         <Hero images={images} offset={0}>
           <BigTitle>

@@ -2,7 +2,7 @@ import React from 'react'
 import GlobalStyle from './GlobalStyle'
 import { ThemeProvider } from 'styled-components'
 import SEO from './SEO'
-// import 'typeface-cantata-one'
+import 'typeface-montserrat'
 // import 'typeface-open-sans'
 import 'typeface-raleway'
 
@@ -13,10 +13,9 @@ const theme = {
     lightGrey: '#c9c9c9',
     mediumGrey: '#A9A9A9',
     darkGrey: '#2f2f2f',
+    fontColor: '#0d0d0d',
   },
-  fonts: {
-    primary: 'Raleway',
-  },
+  fonts: ['Raleway', 'Montserrat'],
 }
 
 const Layout = ({ children }) => (
